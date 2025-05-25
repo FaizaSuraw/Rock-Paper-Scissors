@@ -1,0 +1,66 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta content="text/html" charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Rock, Paper, Scissors</title>
+
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="https://cdn-icons-png.flaticon.com/128/13/13973.png"
+    />
+    <script type="module" crossorigin src="/assets/index-Uow46NRU.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-D8cLf_4H.css">
+  </head>
+
+  <body>
+    <main id="rps-app">
+      <section class="game-container">
+        <header class="header">
+          <p class="footer">
+            © 2024
+            <a
+              href="https://linkedin.com/in/faiza-ibrahim-a21942346"
+              target="_blank"
+              >Faiza Ibrahim</a
+            >
+          </p>
+          <p class="score" id="score-display">computer 0 0 player</p>
+        </header>
+        <article class="player-section margin-top" id="computer-section">
+          <h2 class="player-title">Computer</h2>
+          <span
+            class="player-emoji"
+            id="computer-emoji"
+            aria-label="computer hand"
+            >✋</span
+          >
+        </article>
+        <p class="result-announcement" id="result-announcement">player wins</p>
+        <article class="player-section" id="player-section">
+          <h2 class="player-title">Player</h2>
+          <span class="player-emoji" id="player-emoji" aria-label="player hand"
+            >✌️</span
+          >
+        </article>
+      </section>
+      <nav class="choices" aria-label="Choose your move">
+        <button class="choice-btn" id="rock-choice">
+          <span class="choice-emoji" aria-label="rock">✊</span>
+          <span class="choice-label">rock</span>
+        </button>
+        <button class="choice-btn" id="paper-choice">
+          <span class="choice-emoji" aria-label="paper">✋</span>
+          <span class="choice-label">paper</span>
+        </button>
+        <button class="choice-btn" id="scissors-choice">
+          <span class="choice-emoji" aria-label="scissors">✌️</span>
+          <span class="choice-label">scissors</span>
+        </button>
+      </nav>
+    </main>
+  </body>
+</html>
