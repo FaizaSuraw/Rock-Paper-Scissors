@@ -1,0 +1,164 @@
+/* App Container: Main wrapper for the RPS app */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+:root {
+  --primary-font: "Press Start 2P", system-ui;
+  --color-primary: #9ec91e;
+  --color-secondary: #f2c244;
+  --color-white: #ffffff;
+  --color-black-main: #000000;
+}
+
+#rps-app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--color-primary);
+  width: 50vw;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Game Container: Holds the main game content */
+.game-container {
+  width: 100%;
+}
+
+/* Header: Top bar with title and controls */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: transparent;
+  box-sizing: border-box;
+}
+
+/* Responsive Header: Stack header items vertically on small screens */
+@media screen and (max-width: 28em) {
+  .header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+/* Footer: Footer text styling */
+.footer {
+  font-size: 1.3rem;
+}
+
+/* Player Section: Container for each player */
+.player-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Player Title: Styles for player name/label */
+.player-title {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: 2rem;
+}
+
+/* Player Emoji: Large emoji display for player choice */
+.player-emoji {
+  font-size: 10rem;
+  --size: 13rem;
+  width: var(--size);
+  height: var(--size);
+  border: 2px dashed var(--color-black-main);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  margin-top: 1rem;
+}
+/* Result Announcement: Winner/Result message styling */
+.result-announcement {
+  margin: 2rem auto;
+  padding: 2rem 1rem;
+  background-color: var(--color-secondary);
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+  font-size: 2rem;
+}
+
+/* Choices: Container for user choice buttons */
+.choices {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* Responsive Choices: Stack choice buttons vertically on very small screens */
+@media screen and (max-width: 50em) {
+  .choices {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+/* Choice Button: Styles for each selectable option */
+.choice-btn {
+  padding: 1rem 2rem;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: var(--color-white);
+  transition: background 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Choice Button Hover/Focus: Highlight on interaction */
+.choice-btn:focus,
+.choice-btn:hover {
+  background: var(--color-secondary);
+}
+
+/* Choice Emoji: Emoji icon inside choice button */
+.choice-emoji {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+  user-select: none;
+}
+
+/* Choice Label: Text label under emoji in choice button */
+.choice-label {
+  font-family: "Press Start 2P", sans-serif;
+  text-transform: capitalize;
+  font-size: 1.3rem;
+}
+
+/* Score: Score display styling */
+.score {
+  font-size: 1.3rem;
+}
+
+/* Utility: Adds extra top margin */
+.margin-top {
+  margin-top: 3rem;
+}
